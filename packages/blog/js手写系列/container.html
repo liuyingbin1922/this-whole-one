@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直居中布局</title>
+    <style>
+        /* body {
+            height: 600px;
+        }
+        .container {
+            width: 100%;
+            height: calc(100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .box {
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+        } */
+        .container {
+            background: #777777;
+            height: 400px;
+            text-align: center;
+            font-size: 0;
+            overflow: auto;
+        }
+
+        .container::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .container .content {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100px;
+            height: 100px;
+            background: #ee5f28;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+</body>
+</html>
